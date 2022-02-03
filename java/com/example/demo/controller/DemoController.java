@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.TempController;
 import com.example.demo.domain.*;
 import com.example.demo.service.*;
 
@@ -33,8 +34,13 @@ public class DemoController {
 
         LoginDTO login = new LoginDTO();
         LoginService loginService = new LoginService();
+
+
+
+
+
         while (true) {
-            System.out.println("0.Exit 1.BMI 2.CACLC 3.GOOGLE 4.GRADE 5.LOGIN ");
+            System.out.println("0.Exit 1.BMI 2.CACLC 3.GOOGLE 4.GRADE 5.LOGIN 6.COUNT ");
             String res = "";
             switch (scanner.next()){
                 case "0" :
@@ -76,6 +82,12 @@ public class DemoController {
                     login.setPw(scanner.next());
                     login.setName(scanner.next());
                     res =loginService.execute(login);
+
+                case "6" :
+                    System.out.println("학생수, 이름, 수학, 영어, 국어 점수 입력");
+
+
+
                 ;break;
 
                 default : res = "WRONG"; break;
