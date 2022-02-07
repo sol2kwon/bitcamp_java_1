@@ -14,34 +14,32 @@ package com.example.demo.domain;
 public class BmiDTO {
     public static String BMI = "bmi";
     private String name;
-    private String ki;
-    private String kg;
+    private double ki;
+    private double kg;
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getKi() {
+    public double getKi() {
         return ki;
     }
 
-    public void setKi(String ki) {
+    public void setKi(double ki) {
         this.ki = ki;
     }
 
-    public String getKg() {
+    public double getKg() {
         return kg;
     }
 
-    public void setKg(String kg) {
+    public void setKg(double kg) {
         this.kg = kg;
     }
-
-
 }
 
 

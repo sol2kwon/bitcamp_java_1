@@ -14,7 +14,7 @@ import com.example.demo.domain.GradeDTO;
  * 2022-01-26         solyikwon      최초 생성
  **/
 public class GradeService {
-    public String execute(GradeDTO grade){
+    public String grade(GradeDTO grade){
         int total = grade.getKor()+grade.getEng()+grade.getMath();
         int avg = total/3;
         String res =(avg>=60)?"합격":"불합격";

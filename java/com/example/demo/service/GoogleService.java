@@ -14,7 +14,7 @@ import com.example.demo.domain.GoogleDTO;
  * 2022-01-29         solyikwon      최초 생성
  **/
 public class GoogleService {
-    public String execute(GoogleDTO google) {
+    public String google(GoogleDTO google) {
         System.out.println(google.getWord());
         return "";
     }

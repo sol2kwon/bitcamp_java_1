@@ -1,12 +1,11 @@
 package com.example.demo.controller;
 
-import com.example.demo.TempController;
 import com.example.demo.domain.*;
-import com.example.demo.service.*;
+import com.example.demo.service.StudentService;
 
 import java.util.Scanner;
 
-/**
+/*
  * packageName: com.example.demo.controller
  * fileName        : DemoController.java
  * author          : solyikwon
@@ -17,24 +16,17 @@ import java.util.Scanner;
  * =============================================
  * 2022-01-27         solyikwon      최초 생성
  **/
-public class DemoController {
+
+public class StudentController {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         BmiDTO bmi = new BmiDTO();
-        BmiService bmiService = new BmiService();
-
         CalcDTO calc= new CalcDTO();
-        CalcService calcService= new CalcService();
-
         GoogleDTO google = new GoogleDTO();
-        GoogleService googleService  = new GoogleService();
-
         GradeDTO grade = new GradeDTO();
-        GradeService gradeService = new GradeService();
-
         LoginDTO login = new LoginDTO();
-        LoginService loginService = new LoginService();
-
+        StudentService studentService = new StudentServiceImpl();
 
 
 
@@ -48,9 +40,9 @@ public class DemoController {
                 case "1" :
                     System.out.println(BmiDTO.BMI+"\n이름, 키, 킬로그램");
                     bmi.setName(scanner.next());
-                    bmi.setKi(scanner.next());
-                    bmi.setKg(scanner.next());
-                    res = bmiService.getBmi(bmi);
+                    bmi.setKi(scanner.nextDouble());
+                    bmi.setKg(scanner.nextDouble());
+                    res =studentService.getbmi(bmi);
                     break;
 
                 case "2" :
@@ -58,13 +50,13 @@ public class DemoController {
                     calc.setNum1(scanner.nextInt());
                     calc.setOpcode(scanner.next());
                     calc.setNum2(scanner.nextInt());
-                    res = calcService.execute(calc);
+                    res =studentService.calc(calc);
                     break;
 
                 case "3" :
                 System.out.println(GoogleDTO.GOOGLE+"\n겸색어 입력");
                 google.setWord(scanner.next());
-                res = googleService.execute(google);
+                res = studentService.google(google);
                 break;
 
                 case "4" :
@@ -73,7 +65,7 @@ public class DemoController {
                 grade.setKor(scanner.nextInt());
                 grade.setEng(scanner.nextInt());
                 grade.setMath(scanner.nextInt());
-                res = gradeService.execute(grade);
+                res = studentService.getgrade(grade);
                 break;
 
                 case "5" :
@@ -81,7 +73,7 @@ public class DemoController {
                     login.setId(scanner.next());
                     login.setPw(scanner.next());
                     login.setName(scanner.next());
-                    res =loginService.execute(login);
+                    res =studentService.getlogin(login);
 
                 case "6" :
                     System.out.println("학생수, 이름, 수학, 영어, 국어 점수 입력");

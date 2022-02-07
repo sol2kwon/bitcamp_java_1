@@ -3,7 +3,7 @@ package com.example.demo.service;
 import com.example.demo.domain.CalcDTO;
 
 public class CalcService {
-    public String execute(CalcDTO calc) {
+    public String calc(CalcDTO calc) {
         int result =0;
         switch (calc.getOpcode()){
             case "+" :result = calc.getNum1()+  calc.getNum2(); break;

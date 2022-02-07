@@ -14,7 +14,7 @@ import com.example.demo.domain.BmiDTO;
  * 2022-01-27         solyikwon      최초 생성
  **/
 public class BmiService {
-public String getBmi(BmiDTO bmi){
+public String bmi(BmiDTO bmi){
 
    return String.format("%s정상",bmi.getName());
 }}

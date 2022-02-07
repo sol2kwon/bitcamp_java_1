@@ -3,7 +3,7 @@ package com.example.demo.service;
 import com.example.demo.domain.LoginDTO;
 
 public class LoginService {
-    public String execute(LoginDTO login) {
+    public String login(LoginDTO login) {
         String res = "";
         String ID = login.getId();
         String PW = login.getPw();
