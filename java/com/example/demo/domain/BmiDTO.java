@@ -11,7 +11,7 @@ package com.example.demo.domain;
  * =============================================
  * 2022-01-27         solyikwon      최초 생성
  **/
-public class BmiDTO {
+public class BmiDTO extends Object{
     public static String BMI = "bmi";
     private String name;
     private double ki;
