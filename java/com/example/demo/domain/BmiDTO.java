@@ -11,7 +11,17 @@ package com.example.demo.domain;
  * =============================================
  * 2022-01-27         solyikwon      최초 생성
  **/
-public class BmiDTO extends Object{
+public class BmiDTO {
+    private final static BmiDTO bmiDTO = new BmiDTO();
+
+    public BmiDTO() {
+    }
+
+    public static BmiDTO getInstance() {
+        return bmiDTO;
+    }
+
+
     public static String BMI = "bmi";
     private String name;
     private double ki;
@@ -40,8 +50,8 @@ public class BmiDTO extends Object{
     public void setKg(double kg) {
         this.kg = kg;
     }
-}
 
+}
 
 
 

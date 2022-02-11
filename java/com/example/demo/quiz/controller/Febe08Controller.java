@@ -26,18 +26,23 @@ public class Febe08Controller {
                     System.out.println("종료");return;
                 case"1":
                     System.out.println("### Lotto ###");
+                    febe08Service.lotto(scanner);
                     break;
                 case"2":
                     System.out.println("### Baseball ###");
+                    febe08Service.baseball(scanner);
                     break;
                 case"3":
                     System.out.println("### Booking ###");
+                    febe08Service.booking(scanner);
                     break;
                 case"4":
                     System.out.println("### Bank ###");
+                    febe08Service.bank(scanner);
                     break;
                 case"5":
                     System.out.println("### Gugudan ###");
+                    febe08Service.gugudan(scanner);
                     break;
 
                 default:

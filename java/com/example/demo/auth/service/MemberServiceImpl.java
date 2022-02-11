@@ -16,6 +16,8 @@ import com.example.demo.domain.*;
  **/
 
 public class MemberServiceImpl implements MemberService {
+
+
     /**
      * BMI=w/t*t
      *고도 비만 : 35 이상
@@ -89,7 +91,7 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public String getlogin(LoginDTO login) {
+    public String getlogin(UserDTO login) {
         String res = "";
         String ID = login.getId();
         String PW = login.getPw();

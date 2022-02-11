@@ -1,9 +1,9 @@
 package com.example.demo.quiz.service2;
 
-import com.example.demo.domain.LoginDTO;
+import com.example.demo.domain.UserDTO;
 
 public class LoginService {
-    public String login(LoginDTO login) {
+    public String login(UserDTO login) {
         String res = "";
         String ID = login.getId();
         String PW = login.getPw();

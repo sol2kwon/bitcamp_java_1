@@ -15,7 +15,7 @@ import java.util.Scanner;
  * 2022-02-08         solyikwon      최초 생성
  **/
 public class AlgorithmController {
-    public void execute(Scanner scanner) {
+    public static void execute(Scanner scanner) {
         while (true) {
             System.out.println("[담당] 0.종료 1.심민혜 2.권솔이 3.김지혜 4.하진희 5.최은아");
             switch (scanner.next()) {

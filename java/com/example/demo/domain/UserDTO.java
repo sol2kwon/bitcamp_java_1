@@ -1,11 +1,14 @@
 package com.example.demo.domain;
 
-public class LoginDTO {
+public class UserDTO {
+    private final static UserDTO userDTO = new UserDTO();
+    public UserDTO(){}
+    public static UserDTO getInstance(){return userDTO;}
+
     public static String WEB = "안녕하십니까";
     private String id;
     private String pw;
     String name;
-
 
     public String getId() {
         return id;
@@ -29,5 +32,7 @@ public class LoginDTO {
 
     public void setName(String name) {
         this.name = name;
-    }
-}
+    }}
+
+
+

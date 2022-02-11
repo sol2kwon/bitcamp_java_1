@@ -44,7 +44,7 @@ public class Febe07Controller
                     break;
                 case "3":
                     System.out.println("3.입력받은 두 수 사이의 있는 소수 구하기 getPrime");
-                    febe07Service.getPrime(scanner);
+                    febe07Service.getPrime(scanner.nextInt(),scanner.nextInt());
                     break;
                 case "4" :
                     System.out.println("4.자바로 입력받은 연도가 윤녕인지 평년인지 판단하기 LeapYear");

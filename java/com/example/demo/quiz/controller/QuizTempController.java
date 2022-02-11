@@ -19,10 +19,11 @@ public class QuizTempController {
     public static void execute(Scanner scanner) {
         Febe07Service febe07Service = new Febe07ServiceImpl();
        Febe08Service febe08Service = new Febe08ServiceImpl();
+       Febe10Service febe10Service = new Febe10ServiceImpl();
 
 
         while (true) {
-            System.out.println("[서브메뉴] 0.Exit 1)2월6일 2)2월7일 3)2월 8일 4)2월 9일");
+            System.out.println("[서브메뉴] 0.Exit 1)2월6일 2)2월7일 3)2월 8일 4)2월 9일 5)2월 10일");
             switch (scanner.next()) {
                 case "0":
                     System.out.println("### EXit ###");
@@ -32,7 +33,7 @@ public class QuizTempController {
 
                     break;
                 case "2":
-                    System.out.println("[소메뉴]\n 0.Exit \n1.주사위 \n2.가위바위보 \n3.소수 구하기\n 4.윤년/평년\n 5.임의숫자 맞추기");
+                    System.out.println("[소메뉴]\n0.Exit\n1.주사위\n2.가위바위보\n3.소수 구하기\n 4.윤년/평년\n 5.임의숫자 맞추기");
                     switch (scanner.next()) {
                         case "0":
                             System.out.println("### 종료 ###");
@@ -47,7 +48,7 @@ public class QuizTempController {
                             break;
                         case "3":
                             System.out.println("### 3.소수 구하기 ###");
-                            febe07Service.getPrime(scanner);
+                            febe07Service.getPrime(scanner.nextInt(),scanner.nextInt());
                             break;
                         case "4":
                             System.out.println("### 4.윤년/평년 ###");
@@ -87,9 +88,51 @@ public class QuizTempController {
                     }
                 case "4":
                     System.out.println("### 2월 9일 ###");
+                case "5":
+                    System.out.println("### 2월 10일 ###");
+                    System.out.println("[소메뉴]\n 0.종료 1.BubbleSort 2.InsertionSort 3.SelectionSort 4.QuickSort 5.MergeSort 6.MagicSquare 7.Zigzag 8.RectangleStarPrint 9.TriangleStarPrint");
+                    switch (scanner.next()){
+                        case"0":
+                            System.out.println("종료");return;
+                        case"1":
+                            System.out.println("### BubbleSort ###");
 
-                    break;
-            }
+                            febe10Service.bubbleSort(scanner);
+                            break;
+                        case"2":
+                            System.out.println("### InsertionSort ###");
+                            febe10Service.insertionSort(scanner);
+                            break;
+                        case"3":
+                            System.out.println("### SelectionSort ###");
+                            febe10Service.selectionSort(scanner);
+                            break;
+                        case"4":
+                            System.out.println("### QuickSort ###");
+                            febe10Service.quickSort(scanner);
+                            break;
+                        case"5":
+                            System.out.println("### MergeSort ###");
+                            febe10Service.mergeSort(scanner);
+                            break;
+                        case"6":
+                            System.out.println("### MagicSquare ###");
+                            febe10Service.magicSquare(scanner);
+                            break;
+                        case"7":
+                            System.out.println("### Zigzag ###");
+                            febe10Service.zigzag(scanner);
+                            break;
+                        case"8":
+                            System.out.println("### RectangleStarPrint ###");
+                            febe10Service.rectangleStarPrint(scanner);
+                            break;
+                        case"9":
+                            System.out.println("### TriangleStarPrint ###");
+                            febe10Service.triangleStarPrint(scanner);
+                            break;
+
+                    }
         }
-    }
+    }}
 }
