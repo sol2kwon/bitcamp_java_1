@@ -33,7 +33,7 @@ public class QuizTempController {
 
                     break;
                 case "2":
-                    System.out.println("[소메뉴]\n0.Exit\n1.주사위\n2.가위바위보\n3.소수 구하기\n 4.윤년/평년\n 5.임의숫자 맞추기");
+                    System.out.println("[소메뉴]\n0.Exit\n1.주사위\n2.가위바위보\n3.소수 구하기\n4.윤년/평년\n5.임의숫자 맞추기");
                     switch (scanner.next()) {
                         case "0":
                             System.out.println("### 종료 ###");

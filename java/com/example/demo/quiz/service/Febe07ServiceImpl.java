@@ -16,7 +16,16 @@ import java.util.Scanner;
  **/
 
 /**
- * 1에서부터 6까지의 눈을 가진 2개의 주사위를 랜덤으로 던져서 같은 눈이 나오면 프로그램을 종료한다.
+ ★2개의 랜덤 주사위(6개의 눈)
+ 1에서부터 6까지의 눈을 가진 2개의 주사위를 랜덤으로 던져서 같은 눈이 나오면 프로그램을 종료한다.
+ Math.random은 0.0~1.0사이의 임의의 double을 출력한다.(0.9999999까지 출력)
+ 몇번째 시도를 했는지 나타내주기 위하여 int count =1 을 선언해준다.
+ 몇번을 시도할지 알 수 없기때문에 while문을 통해 랜덤 주사위 값을 a,b에 저장한다.
+ Math.random은 소수점까지 출력되기 때문에 int를 붙여준다. 주사위 눈이 6개여서 6을 곱해주고 1을 더해준다.
+ (최대 0.9999999*6을 해줘도 6을 넘지 않음//5.99999로 출력될때 int Math.random → 5 //int Math.random +1→ 6)
+ count+번째 시도 출력를 출력한다.
+ 첫번째 주사위 a와 두번째 주사위 b를 출력한다.
+ 만약 주사위 a,b가 같다면 멈춘다.끝.
  */
 
 public class Febe07ServiceImpl implements Febe07Service {
@@ -32,7 +41,6 @@ public class Febe07ServiceImpl implements Febe07Service {
             if (a == b) {
                 break;
             }
-
         }
     }
 
