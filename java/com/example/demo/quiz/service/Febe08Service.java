@@ -19,4 +19,5 @@ public interface Febe08Service {
     void booking(Scanner scanner);
     void bank(Scanner scanner);
     void gugudan(Scanner scanner);
+
 }

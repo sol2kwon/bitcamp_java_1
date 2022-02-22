@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Scanner;
 import java.util.concurrent.ThreadPoolExecutor;
 
+
 @SpringBootApplication
 class Demo1Application {
 
