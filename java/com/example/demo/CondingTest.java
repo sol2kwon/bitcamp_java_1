@@ -25,18 +25,18 @@ public class CondingTest {
      * */
     public static void main(String[] args) {
         int[] a = {500, 100, 50, 10};
+        int[] aconin = new int[4];
         int b = 1260;
-        int count = 0;
-        int result = 0;
-        int s = 0;
+        String result = "";
 
-        for (int i = 0; i < a.length; i++){
-            for (int k=0; k>a[i]; k++){
-            result = b % a[i];
-            count = b/a[i]+1;
-                System.out.println(result + "//돈 나머지");
-            System.out.println(count);
-            }}}}
+        for (int i=0; i<a.length; i++){
+            aconin[i]=b/a[i];
+            b %=a[i];
+            result += a[i] +"원 "+aconin[i]+" 개";
+        }
+            System.out.println(result);
+    }}
+
 
 
 
